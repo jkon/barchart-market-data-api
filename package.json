@@ -1,6 +1,6 @@
 {
   "name": "barchart-ondemand-market-data-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Barchart OnDemand API service has access to 15-minute delayed market data for BATS (US equities) and global Forex pairs, and end-of-day (including historical) market data for US equities from AMEX, NASDAQ, NYSE and futures from CBOT, CME, COMEX and NYMEX. This package gives a set of wrapper functions to make and manage the http requests for you. All you need to provide is an API key you get from Barchart",
   "main": "index.js",
   "scripts": {
