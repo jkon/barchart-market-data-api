@@ -1,9 +1,10 @@
 'use strict';
 
-var MarketData = require('../');
-var should = require('should');
+const MarketData = require('../');
+const should = require('should');
+const mocha = require('mocha');
 
-var APIKEY = process.env.APIKEY;
+const APIKEY = process.env.APIKEY;
 
 if (!APIKEY) {
   throw new Error('APIKEY not provided');
@@ -12,18 +13,20 @@ if (!APIKEY) {
 describe('MarketData', function () {
   describe('#getHistory', function () {
     it('should return an Array of data', function (done) {
-      var md = new MarketData(APIKEY);
+      const md = new MarketData(APIKEY);
       md.getHistory('IBM').then(function (history) {
         history.should.be.instanceof(Array);
+        console.log(history);
         done();
       });
     });
   });
   describe('#getQuote', function () {
     it('should return an Array of data', function (done) {
-      var md = new MarketData(APIKEY);
+      const md = new MarketData(APIKEY);
       md.getQuote('IBM').then(function (quotes) {
         quotes.should.be.instanceof(Array);
+        console.log(quotes);
         done();
       });
     });

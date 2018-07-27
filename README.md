@@ -1,16 +1,20 @@
-## Barchart OnDemand Free Market Data API Client
+## Barchart OnDemand Market Data API Client
 
 Barchart offers free Market data API on [freemarketdataapi.barchartondemand.com](http://freemarketdataapi.barchartondemand.com),
 to use the API you need an API key which is provided singing up on theirs website.
 
+Barchart also offers a larger catalog of paid for APIs which you need an API key for that has been granted such access. This library currently only supports the free APIs, but I plan to eventually add support for some more of the paid ones as well.
+
 This client offers access to free methods `getQuote` and `getHistory`.
+
+This repo was forked from <a href="https://github.com/yagop/barchart-market-data-api">yagop/barchart-market-data-api</a> and updated to es6
 
 ### Example
 
 ```js
-var MarketData = require('barchart-market-data-api');
+const MarketData = require('barchart-market-data-api');
 
-var md = new MarketData(__YOUR_API_KEY__);
+const md = new MarketData(__YOUR_API_KEY__);
 md.getHistory('IBM').then(function (history) {
   console.log('History data:', history);
 });
